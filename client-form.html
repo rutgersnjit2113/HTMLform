@@ -22,17 +22,17 @@
 	    <input type='submit' name='submit' value='Submit Form' />
     </form>
     <script>
-      document.serverform.onsubmit=function()
+      document.serverform.submit=function()
       {
 	      if(document.serverform.fullname.value =='')
 	    {
-		    alert("Please enter your name");
+		    alert("Please enter your name.");
 		    document.serverform.fullname.focus();
 		    return false;
 	    }
 	      else if(document.serverform.email.value =='')
 	    {
-		    alert("Please enter your Email address");
+		    alert("Please enter your Email address.");
 		    document.serverform.email.focus();
 		    return false;
 	    }
