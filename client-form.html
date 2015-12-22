@@ -1,0 +1,43 @@
+<html>
+  <head>
+	  <title>Simple HTML form sample</title>
+	  <style>
+	    label{
+	    font-family:Arial, Helvetica;
+	    font-size:0.8em;
+	    }
+	  </style>
+  </head>
+  <body>
+    <form method='post' action='server-form.php' name='serverform' id='serverform'>
+	    <p>
+	      <label for='fullname'>Your Name:</label><br/>
+	      <input type='text' name='fullname' />
+	    </p>
+
+	    <p>
+	      <label for='email' >Email Address:</label><br/>
+	      <input type='text' name='email' />
+	    </p>
+	    <input type='submit' name='submit' value='Submit Form' />
+    </form>
+    <script>
+      document.serverform.onsubmit=function()
+      {
+	      if(document.serverform.fullname.value =='')
+	    {
+		    alert("Please enter your name");
+		    document.serverform.fullname.focus();
+		    return false;
+	    }
+	      else if(document.serverform.email.value =='')
+	    {
+		    alert("Please enter your Email address");
+		    document.serverform.email.focus();
+		    return false;
+	    }
+	      return true;
+      }
+    </script>
+  </body>
+</html>
